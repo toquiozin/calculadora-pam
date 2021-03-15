@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="components/codigo.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script>
+    ons.ready(function() {
+      console.log("Onsen UI is ready!");
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" id="num1" placeholder="Digite o Primeiro Valor">
+      </div>
+      <div class="input-group mb-3">
+          <input type="number" class="form-control" id="num2" placeholder="Digite o Segundo Valor">
+      </div>   
+  </div>
+  </div>
+  <div class="row">
+    <div class="offset-3 col">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-warning" onclick="mais()">+</button>
+    <button type="button" class="btn btn-warning" onclick="menos()">-</button>
+    <button type="button" class="btn btn-warning" onclick="multi()">X</button>
+    <button type="button" class="btn btn-warning" onclick="divsao()">/</button>
+    <button type="button" class="btn btn-warning" onclick="expo()">^</button>
+    </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <input type="number" class="form-control" id="result" placeholder="Resultado" >
+    </div>
+  </div>
+  </div>
+</body>
+</html>
